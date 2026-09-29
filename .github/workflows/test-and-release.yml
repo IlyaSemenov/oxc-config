@@ -61,10 +61,8 @@ jobs:
 
       - name: Create Release Pull Request or Publish to npm
         if: ${{ github.ref == env.MAIN_REF }}
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.2
         with:
-          publish: npx changeset publish
-          title: ${{ env.RELEASE }}
-          commit: ${{ env.RELEASE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          publish-script: npx changeset publish
+          pr-title: ${{ env.RELEASE }}
+          commit-message: ${{ env.RELEASE }}
