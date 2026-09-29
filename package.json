@@ -1,6 +1,6 @@
 {
   "name": "@ilyasemenov/oxc-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable oxlint, oxfmt, and ESLint configurations for projects I develop or oversee",
   "homepage": "https://github.com/IlyaSemenov/oxc-config#readme",
   "bugs": "https://github.com/IlyaSemenov/oxc-config/issues",
