@@ -2,7 +2,7 @@
 
 ## Overview
 
-Shared oxlint, oxfmt, and ESLint configurations for JavaScript, TypeScript, and Vue
+Reusable oxlint, oxfmt, and ESLint configurations.
 
 Read [README.md](README.md) completely before changing the public API, package behavior, supported runtimes, or user documentation.
 
