@@ -1,0 +1,89 @@
+{
+  "name": "@ilyasemenov/oxc-config",
+  "version": "0.0.0",
+  "description": "Shared oxlint, oxfmt, and ESLint configurations for JavaScript, TypeScript, and Vue",
+  "homepage": "https://github.com/IlyaSemenov/oxc-config#readme",
+  "bugs": "https://github.com/IlyaSemenov/oxc-config/issues",
+  "license": "MIT",
+  "author": "Ilya Semenov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaSemenov/oxc-config.git"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./oxlint": {
+      "types": "./dist/oxlint.d.mts",
+      "import": "./dist/oxlint.mjs"
+    },
+    "./oxfmt": {
+      "types": "./dist/oxfmt.d.mts",
+      "import": "./dist/oxfmt.mjs"
+    },
+    "./eslint": {
+      "types": "./dist/eslint.d.mts",
+      "import": "./dist/eslint.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepare": "lefthook install",
+    "types": "tsc && tsc -p tests/tsconfig.json",
+    "test": "bun test",
+    "prepublishOnly": "bun run build",
+    "lint": "oxlint --fix && oxfmt",
+    "lint:check": "oxlint && oxfmt --check"
+  },
+  "dependencies": {
+    "eslint-plugin-perfectionist": "^5.12.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.5.1",
+    "@arethetypeswrong/core": "^0.18.5",
+    "@changesets/cli": "^3.0.3",
+    "@tsconfig/bun": "^1.0.11",
+    "@types/bun": "^1.4.2",
+    "eslint": "^10.11.0",
+    "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "publint": "^0.3.24",
+    "tsdown": "^0.23.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0"
+  },
+  "peerDependencies": {
+    "@antfu/eslint-config": "^9.5.1",
+    "eslint": "^10.11.0",
+    "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0",
+    "typescript-eslint": "^8.71.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    },
+    "@antfu/eslint-config": {
+      "optional": true
+    },
+    "eslint-plugin-vue-pug": {
+      "optional": true
+    },
+    "typescript-eslint": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.18.0 || >=24.0.0"
+  },
+  "packageManager": "bun@1.4.2"
+}
