@@ -15,6 +15,7 @@
     "dist"
   ],
   "type": "module",
+  "sideEffects": false,
   "exports": {
     "./oxlint": {
       "types": "./dist/oxlint.d.mts",
@@ -27,7 +28,8 @@
     "./eslint": {
       "types": "./dist/eslint.d.mts",
       "import": "./dist/eslint.mjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "publishConfig": {
     "access": "public",
