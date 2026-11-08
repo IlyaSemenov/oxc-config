@@ -15,5 +15,5 @@ import parent from "../parent"
 
 import sibling from "./sibling"
 
-export { backend, web, join, expect, test, readFile, sibling, parent, external, value }
+export { backend, expect, external, join, parent, readFile, sibling, test, value, web }
 export type { Value }

@@ -43,7 +43,8 @@
     "lint:check": "oxlint && oxfmt --check"
   },
   "dependencies": {
-    "eslint-plugin-perfectionist": "^5.12.1"
+    "eslint-plugin-perfectionist": "^5.12.1",
+    "eslint-plugin-regexp": "^3.3.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.5.1",

@@ -3,6 +3,8 @@
 Reusable oxlint, oxfmt, and ESLint configurations for projects I develop or oversee.
 
 Code is linted with oxlint and formatted with oxfmt.
+The oxlint config enables code quality rules close to [@antfu/eslint-config](https://github.com/antfu/eslint-config) that oxlint supports natively, plus [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) as a JS plugin.
+Rules of the correctness category are errors.
 For Vue, ESLint additionally lints and formats templates, which oxlint cannot do.
 Both HTML and Pug templates are supported.
 
@@ -101,10 +103,31 @@ The Pug preset disables some HTML checks for all Vue files, so enable it only in
 - `bun:*` imports grouped with `node:*`; `~`, `#`, and `@/` treated as internal prefixes.
 - Package subpaths kept together: `#app/…` before `#app-server/…`.
 - Named imports sorted by their original name, ignoring aliases; type imports before value imports from the same module.
+- Named exports sorted too.
+- Braces around every block, including single-statement `if` bodies.
+- `test` instead of `it`.
+- `console.log` is a warning.
 - Vue component names in kebab-case, for both HTML and Pug.
 - No empty component blocks; `v-for` without a key and string concatenation are allowed.
 
 Imports are sorted by Perfectionist in oxlint: oxfmt's `sortImports` doesn't support this order, so keep it disabled.
+
+Oxlint test rules don't recognize imports from `bun:test`.
+To forbid `it` imported from `bun:test`, add `no-restricted-imports` to your `oxlint.config.ts`:
+
+```ts
+export default defineConfig({
+  extends: [base],
+  rules: {
+    "no-restricted-imports": [
+      "error",
+      {
+        paths: [{ name: "bun:test", importNames: ["it"], message: "Use `test` instead of `it`." }],
+      },
+    ],
+  },
+})
+```
 
 ## Running it
 
