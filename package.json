@@ -32,8 +32,7 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "scripts": {
     "build": "tsdown",
@@ -41,6 +40,8 @@
     "types": "bun check && bun check -p tests",
     "test": "bun test",
     "prepublishOnly": "bun run build",
+    "release": "changesets-local",
+    "release:check": "bun run build && bun run types && bun run test",
     "lint": "oxlint --fix && oxfmt",
     "lint:check": "oxlint && oxfmt --check"
   },
@@ -53,6 +54,7 @@
     "@changesets/cli": "^3.0.3",
     "@tsconfig/bun": "^1.0.11",
     "@types/bun": "^1.4.4",
+    "changesets-local": "^1.6.0",
     "eslint": "^10.14.0",
     "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
     "oxfmt": "^0.77.0",

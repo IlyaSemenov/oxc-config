@@ -13,6 +13,7 @@
         "@changesets/cli": "^3.0.3",
         "@tsconfig/bun": "^1.0.11",
         "@types/bun": "^1.4.4",
+        "changesets-local": "^1.6.0",
         "eslint": "^10.14.0",
         "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
         "oxfmt": "^0.77.0",
@@ -390,6 +391,8 @@
     "ccount": ["ccount@2.0.1", "", {}, "sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg=="],
 
     "change-case": ["change-case@5.4.4", "", {}, "sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w=="],
+
+    "changesets-local": ["changesets-local@1.6.0", "", { "bin": { "changesets-local": "dist/cli.mjs" } }, "sha512-c7U00YJKE/BBLpueixqoMtR8c2sHcOtaInHAaQhLawK3hbYT6Hk5lQJ74uLNyd8/2I8c6dVL8XWz/BB2DYOg/w=="],
 
     "character-entities": ["character-entities@2.0.2", "", {}, "sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ=="],
 
