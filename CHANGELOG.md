@@ -1,5 +1,12 @@
 # @ilyasemenov/oxc-config
 
+## 0.1.2
+
+### Patch Changes
+
+- 6d3248d: Allow importing `@ilyasemenov/oxc-config/package.json`.
+- 2aaea3b: Accept any oxfmt 0.x release starting from 0.71 as a peer dependency.
+
 ## 0.1.1
 
 ### Patch Changes
