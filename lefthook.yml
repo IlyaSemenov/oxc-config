@@ -1,5 +1,6 @@
 glob_matcher: doublestar
 pre-commit:
+  # oxlint --fix rewrites code, such as sorted imports, so oxfmt must format the files after it.
   piped: true
   commands:
     oxlint:
