@@ -52,17 +52,17 @@
     "@antfu/eslint-config": "^9.5.1",
     "@arethetypeswrong/core": "^0.18.5",
     "@changesets/cli": "^3.0.3",
-    "@tsconfig/bun": "^1.0.11",
+    "@tsconfig/bun": "^1.0.12",
     "@types/bun": "^1.4.4",
     "changesets-local": "^1.6.0",
     "eslint": "^10.14.0",
     "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
-    "oxfmt": "^0.77.0",
-    "oxlint": "^1.92.0",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
     "publint": "^0.3.25",
     "tsdown": "^0.23.7",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.72.1"
+    "typescript-eslint": "^8.72.2"
   },
   "peerDependencies": {
     "@antfu/eslint-config": "^9.5.1",
