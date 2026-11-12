@@ -1,5 +1,11 @@
 # @ilyasemenov/oxc-config
 
+## 0.1.3
+
+### Patch Changes
+
+- e4c0893: Accept `@antfu/eslint-config` 10 as a peer dependency.
+
 ## 0.1.2
 
 ### Patch Changes
