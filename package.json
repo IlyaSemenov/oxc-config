@@ -40,7 +40,7 @@
     "types": "bun check && bun check -p tests",
     "test": "bun test",
     "prepublishOnly": "bun run build",
-    "release": "changesets-local",
+    "release": "changesets-release",
     "lint": "oxlint --fix && oxfmt",
     "lint:check": "oxlint && oxfmt --check"
   },
@@ -53,7 +53,7 @@
     "@changesets/cli": "^3.0.3",
     "@tsconfig/bun": "^1.0.12",
     "@types/bun": "^1.4.4",
-    "changesets-local": "^1.6.0",
+    "changesets-release": "^2.1.1",
     "eslint": "^10.14.0",
     "eslint-plugin-vue-pug": "^1.0.0-alpha.6",
     "oxfmt": "^0.78.0",
